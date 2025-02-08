@@ -1,25 +1,24 @@
+
 ---
 
-# **Minor_ArtiFuse_GAN_Training**  
-### **Facial Image Inpainting with Pix2Pix cGAN**  
+# **ArtiFuse: Facial Image Inpainting with Pix2Pix cGAN**  
 
-ArtiFuse presents an innovative approach to **facial image inpainting** using a specialized **Conditional Generative Adversarial Network (cGAN)**. This project explores **GAN architectures** for intelligent **facial restoration**, allowing users to seamlessly reconstruct masked regions in images.  
+ArtiFuse is a deep learning project that explores **facial image inpainting** using a **Conditional Generative Adversarial Network (cGAN)**. The goal is to intelligently reconstruct masked regions in images, enabling seamless facial restoration.  
 
-While **state-of-the-art models** exist, this project focuses on experimentation and pushing the limits of **GAN-based inpainting** within constrained computational resources. The ultimate goal is to provide a practical **toolset** for facial inpainting tasks and create a **user-friendly web application** for image input, mask creation, and restoration.  
+While state-of-the-art models exist, this project focuses on **experimenting with GAN-based inpainting** under **limited computational resources**. The ultimate aim is to develop a **practical toolset** and a **user-friendly web application** for facial inpainting.  
 
 ---
 
 ## 🚀 **Project Overview**  
 
-This repository contains the **code** required to **train, retrain, and test** the Pix2Pix cGAN model for facial inpainting. The model is trained on the **CelebA dataset** using **roughly 24,000 images** iteratively.  
-
+This repository contains the complete **training, retraining, and testing pipeline** for the Pix2Pix cGAN model, trained at **128×128 resolution** (scalable for higher resolutions but limited by compute). The model is trained on the **CelebA dataset** using approximately **24,000 images iteratively**.  
 
 ### 🔹 **Key Features**  
-✔️ **Image Preprocessing**: Prepares CelebA images for training.  
-✔️ **GAN Training**: Implements Pix2Pix cGAN to train the model.  
-✔️ **Model Retraining**: Allows saved models to be retrained with new data.  
-✔️ **Performance Testing**: Evaluates the model’s output on test data.  
-✔️ **Mask Generation**: Generates masked images for training.  
+✔️ **Image Preprocessing** – Prepares CelebA images for training.  
+✔️ **GAN Training** – Implements the Pix2Pix cGAN model.  
+✔️ **Model Retraining** – Supports fine-tuning with new data.  
+✔️ **Performance Evaluation** – Tests the model’s inpainting accuracy.  
+✔️ **Mask Generation** – Automates mask creation for training.  
 
 ---
 
@@ -27,76 +26,81 @@ This repository contains the **code** required to **train, retrain, and test** t
 
 | File | Description |
 |------|------------|
-| `image_preprocessing_training.ipynb` | Loads the uploaded images from named directories in google drive and trains the models|
-| `loading_the_trained_model_and_retraining.ipynb` | Allows retraining of an existing saved model. |
+| `image_preprocessing_training.ipynb` | Preprocesses images and trains the model using Google Drive storage. |
+| `loading_the_trained_model_and_retraining.ipynb` | Loads and fine-tunes an existing trained model. |
 | `testing_model_performance_on_data.ipynb` | Evaluates the trained model on test images. |
-| `masking_generation.py` | Adds masks to CelebA images for inpainting training. |
+| `masking_generation.py` | Generates masked images for inpainting training. |
 
 ---
 
 
+## 🎯 **Model Performance**  
 
-**Features:**  
-✔️ **Upload & preprocess images**  
-✔️ **Create and modify masks for inpainting**  
-✔️ **Apply the trained GAN model for image restoration**  
-✔️ **Download the inpainted output**  
+### 📊 **Training Progress (After 26 epochs on 8,000 images, ~8 epochs on 24,000 images iteratively)**  
 
----
-
-### 📊**Performance after 26 epochs on 8000 dataset (~8 epochs on total 24000 dataset iteratively)**  
-### **Performance on Testing Dataset**  
+#### **Testing Dataset Results**  
 ![Performance on Testing Dataset](https://github.com/user-attachments/assets/85121057-3ded-4500-844b-d35f456c529d)  
 
-## **Training Loss Curve**  
-### **initial loss**
-![Image](https://github.com/user-attachments/assets/2c761e39-a54c-42c1-ad8e-b01c5595c048)
-![Image](https://github.com/user-attachments/assets/3fd5c647-2496-4b5d-8617-ee15505a4da4)
-### **final loss**
+#### **Training Loss Curve**  
+
+**Initial Loss:**  
+![Image](https://github.com/user-attachments/assets/2c761e39-a54c-42c1-ad8e-b01c5595c048)  
+![Image](https://github.com/user-attachments/assets/3fd5c647-2496-4b5d-8617-ee15505a4da4)  
+
+**Final Loss:**  
 ![Loss Graph 1](https://github.com/user-attachments/assets/f7806650-4bbf-4c10-af5c-aed30042ceaf)  
 ![Loss Graph 2](https://github.com/user-attachments/assets/88818f59-6e04-44a5-b734-9c5b638e5c14)  
 
 ---
 
 ## 🖼️ **Sample Outputs**  
-![Output Sample 1](https://github.com/user-attachments/assets/7b9ed505-1405-4754-a29b-5babeaa3fa62)  
-![Output Sample 2](https://github.com/user-attachments/assets/513734c1-0079-4450-b3ed-a9040f56c634)  
-![Output Sample 3](https://github.com/user-attachments/assets/8ba17259-55d8-419f-9e07-453f14af0275)  
-![Image](https://github.com/user-attachments/assets/53a3090e-9b74-41e7-8ec9-c3c3bb8510d9)
-![Image](https://github.com/user-attachments/assets/4d542adf-5553-4d96-8bf2-3f706bc6d182)
-![Image](https://github.com/user-attachments/assets/cef4eeee-c8fc-4116-8508-b68a8a7ef3d6)
 
+| Input | Output |
+|------|------|
+| ![Output Sample 1](https://github.com/user-attachments/assets/7b9ed505-1405-4754-a29b-5babeaa3fa62) | ![Output Sample 2](https://github.com/user-attachments/assets/513734c1-0079-4450-b3ed-a9040f56c634) |
+| ![Output Sample 3](https://github.com/user-attachments/assets/8ba17259-55d8-419f-9e07-453f14af0275) | ![Image](https://github.com/user-attachments/assets/53a3090e-9b74-41e7-8ec9-c3c3bb8510d9) |
+| ![Image](https://github.com/user-attachments/assets/4d542adf-5553-4d96-8bf2-3f706bc6d182) | ![Image](https://github.com/user-attachments/assets/cef4eeee-c8fc-4116-8508-b68a8a7ef3d6) |
 
 ---
 
+## 🔗 **Pretrained Models (Generator & Discriminator)**  
+
+The trained models are available on Google Drive:  
+[**Download Models Here**](https://drive.google.com/drive/folders/1WsPnQztd-It34YWdiGAIMEihXENYfQ3T?usp=sharing)  
+
+---
 
 ## 🌐 **Web Implementation**  
 
-🔗 **Web Application Repository(not deployed)**:  
+🔗 **Web Application Repository (Not Deployed Yet):**  
 [**Minor_ArtiFuse Web Application**](https://github.com/SauravKumarMahato/Minor_ArtiFuse.git)  
 
-## **Frontend Preview**  
+### **Frontend Preview**  
 ![Website Frontend](https://github.com/user-attachments/assets/e754922a-d293-4ed2-978b-ddcf4bd42401)  
 
+---
 
-## 🔍 **Project Context & Motivation**  
+## 🔍 **Project Motivation & Applications**  
 
-The **ArtiFuse GAN model** is designed to intelligently reconstruct missing regions in facial images. It can:  
-✔️ **Erase imperfections** such as blemishes, scars, and wrinkles.  
-✔️ **Restore old or damaged photographs** with missing sections.  
-✔️ **Enable facial editing** by removing unwanted elements from images.  
+ArtiFuse is designed to intelligently reconstruct missing regions in facial images. Potential applications include:  
+✔️ **Removing imperfections** (e.g., blemishes, scars, and wrinkles).  
+✔️ **Restoring old or damaged photographs** with missing sections.  
+✔️ **Facial editing** by removing unwanted elements.  
 
-Despite the existence of **highly advanced models**, this project focuses on **researching and testing** the capabilities of **GAN architectures** within limited computational constraints.  
-
-## 🛠 **Future Work**  
-- ✅ **Enhance training with more diverse datasets**  
-- ✅ **Improve inpainting results for extreme occlusions**  
-- ✅ **Deploy a web-based interactive application**  
+This project serves as an **experimental research tool**, exploring the limits of **GAN-based inpainting** under **constrained resources**.  
 
 ---
+
+## 🎯 **Future Work**  
+✅ Enhance training with more diverse datasets.  
+✅ Improve inpainting results for extreme occlusions.  
+✅ Deploy a fully interactive web application.  
+
+---
+
+
 
 ## 📌 **Keywords**  
 **GAN, Pix2Pix, cGAN, image inpainting, facial inpainting, AI restoration, deep learning, image reconstruction, AI-generated content.**  
 
 ---
-
