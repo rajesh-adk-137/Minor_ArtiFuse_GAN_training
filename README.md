@@ -3,11 +3,16 @@
 
 # **ArtiFuse: Facial Image Inpainting with Pix2Pix cGAN**  
 
+**Authors:**  
+- Rajesh Adhikari  
+- Sandhya Baral  
+- Saurav Kumar Mahato  
+
 ArtiFuse is a deep learning project that explores **facial image inpainting** using a **Conditional Generative Adversarial Network (cGAN)**. The goal is to intelligently reconstruct masked regions in images, enabling seamless facial restoration.  
 
 While state-of-the-art models exist, this project focuses on **experimenting with GAN-based inpainting** under **limited computational resources**. The ultimate aim is to develop a **practical toolset** and a **user-friendly web application** for facial inpainting.  
 
----
+---  
 
 ## 🚀 **Project Overview**  
 
@@ -20,7 +25,7 @@ This repository contains the complete **training, retraining, and testing pipeli
 ✔️ **Performance Evaluation** – Tests the model’s inpainting accuracy.  
 ✔️ **Mask Generation** – Automates mask creation for training.  
 
----
+---  
 
 ## 📁 **Repository Structure**  
 
@@ -31,8 +36,7 @@ This repository contains the complete **training, retraining, and testing pipeli
 | `testing_model_performance_on_data.ipynb` | Evaluates the trained model on test images. |
 | `masking_generation.py` | Generates masked images for inpainting training. |
 
----
-
+---  
 
 ## 🎯 **Model Performance**  
 
@@ -51,7 +55,7 @@ This repository contains the complete **training, retraining, and testing pipeli
 ![Loss Graph 1](https://github.com/user-attachments/assets/f7806650-4bbf-4c10-af5c-aed30042ceaf)  
 ![Loss Graph 2](https://github.com/user-attachments/assets/88818f59-6e04-44a5-b734-9c5b638e5c14)  
 
----
+---  
 
 ## 🖼️ **Sample Outputs**  
 
@@ -61,14 +65,14 @@ This repository contains the complete **training, retraining, and testing pipeli
 | ![Output Sample 3](https://github.com/user-attachments/assets/8ba17259-55d8-419f-9e07-453f14af0275) | ![Image](https://github.com/user-attachments/assets/53a3090e-9b74-41e7-8ec9-c3c3bb8510d9) |
 | ![Image](https://github.com/user-attachments/assets/4d542adf-5553-4d96-8bf2-3f706bc6d182) | ![Image](https://github.com/user-attachments/assets/cef4eeee-c8fc-4116-8508-b68a8a7ef3d6) |
 
----
+---  
 
 ## 🔗 **Pretrained Models (Generator & Discriminator)**  
 
 The trained models are available on Google Drive:  
 [**Download Models Here**](https://drive.google.com/drive/folders/1WsPnQztd-It34YWdiGAIMEihXENYfQ3T?usp=sharing)  
 
----
+---  
 
 ## 🌐 **Web Implementation**  
 
@@ -78,7 +82,7 @@ The trained models are available on Google Drive:
 ### **Frontend Preview**  
 ![Website Frontend](https://github.com/user-attachments/assets/e754922a-d293-4ed2-978b-ddcf4bd42401)  
 
----
+---  
 
 ## 🔍 **Project Motivation & Applications**  
 
@@ -89,18 +93,16 @@ ArtiFuse is designed to intelligently reconstruct missing regions in facial imag
 
 This project serves as an **experimental research tool**, exploring the limits of **GAN-based inpainting** under **constrained resources**.  
 
----
+---  
 
 ## 🎯 **Future Work**  
 ✅ Enhance training with more diverse datasets.  
 ✅ Improve inpainting results for extreme occlusions.  
 ✅ Deploy a fully interactive web application.  
 
----
-
-
+---  
 
 ## 📌 **Keywords**  
 **GAN, Pix2Pix, cGAN, image inpainting, facial inpainting, AI restoration, deep learning, image reconstruction, AI-generated content.**  
 
----
+---  
